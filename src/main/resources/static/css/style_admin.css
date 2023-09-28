@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+}
+
+#main{
+    color: #333;
+}
+
+.side-bar{
+    width: 280px;
+    background-color: #eee;
+    height: 100vh;
+}
+
+.main-content{
+    width: calc(100vw - 280px);
+    overflow-x: hidden;
+}
+
+.header-manager{
+    background-color: #eee;
+    height: 100px;
+    box-shadow: 0 0 5px #ccc;
+    /* position: fixed;
+    left: 292px;
+    top: 0;
+    right: 0;
+    z-index: 1; */
+}
+
+.content{
+    /* margin-top: 100px; */
+    background: #fff;
+}
+
+.job-content{
+    background: #eee;
+    padding: 16px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.contennt-title-heading{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+
+.contet-title-sub{
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+
+
+.job-card{
+    text-decoration: none;
+    color: #333;
+    /* border: 1px solid #333; */
+    padding: 0 6px;
+    margin-bottom: 12px;
+}
+
+.job-card-body{
+    padding: 24px 12px;
+    border-radius: 10px;
+    /* border: 1px solid #666; */
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.job-card-body .job-quantity{
+    /* font-size: 24px; */
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.job-card-body .job-name{
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.job-card:hover .job-card-body{
+    background-color: #6C757D;
+    color: #fff;
+}
+
+
+/* statistical-content */
+.statistical-content{
+    margin-top: 18px;
+    background: #eee;
+    padding: 16px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.statistical-container{
+    width: 80%;
+    margin: 24px auto;
+}
+
+.chart-container {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statistical-sale-container{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.statistical-card{
+    color: #333;
+    /* border: 1px solid #333; */
+    padding: 0 6px;
+    margin-bottom: 12px;
+}
+
+.statistical-card-body{
+    padding: 24px 12px;
+    border-radius: 10px;
+    /* border: 1px solid #666; */
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.statistical-card-body .statistical-quantity{
+    /* font-size: 24px; */
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.statistical-card-body .statistical-name{
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+/* footer */
+  .footer{
+    margin-top: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    height: 60px;
+    background: #eee;
+    box-shadow: 0 0 5px #ccc;
+  }
+
+  .footer-title{
+    margin: 0;
+    line-height: 60px;
+    opacity: 0.8;
+  }
+
+  /*form add user*/
+.my-form{
+    background-color: #eee;
+    max-width: 500px;
+}
