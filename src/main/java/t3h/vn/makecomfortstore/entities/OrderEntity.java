@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public class OrderEntity {
     @Id
-    @Column(name = "orderId")
+    @Column(name = "order_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
@@ -32,14 +32,14 @@ public class OrderEntity {
     @Column(name = "status")
     private String status;
 
-    @Column(name = "orderDate")
+    @Column(name = "order_date")
     private String orderDate;
 
     @Column(name = "total")
     private Double total;
 
     @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
     private UserEntity user;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)

@@ -10,6 +10,8 @@ import java.util.List;
 public interface CategoryRepository extends JpaRepository<CategoryEntity, Integer> {
     CategoryEntity findByCategoryName(String name);
 
+    CategoryEntity findByCategoryId(Integer id);
+
     @Query("SELECT c FROM CategoryEntity c WHERE c.categoryStatus = 1 ORDER BY c.categoryId ASC")
     List<CategoryEntity> findListCategory();
 }

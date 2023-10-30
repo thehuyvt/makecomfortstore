@@ -23,10 +23,10 @@ public class OrderDetailEntity {
     private Double total;
 
     @ManyToOne
-    @JoinColumn(name = "orderId", referencedColumnName = "orderId", nullable = false)
+    @JoinColumn(name = "order_id", referencedColumnName = "order_id", nullable = false)
     private OrderEntity order;
 
     @ManyToOne
-    @JoinColumn(name = "variantId", referencedColumnName = "variantId", nullable = false)
+    @JoinColumn(name = "variant_id", referencedColumnName = "variant_id", nullable = false)
     private ProductVariantEntity productVariantEntity;
 }

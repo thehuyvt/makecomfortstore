@@ -1,0 +1,26 @@
+.image-content{
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.extra-image{
+    border: 1px solid #ddd;
+    width: 150px;
+}
+
+.extra-image-delete{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    /* padding: 3px; */
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.extra-image-delete:hover{
+    color: #E74C3C;
+}
+

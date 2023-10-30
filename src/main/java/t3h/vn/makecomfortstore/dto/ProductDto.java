@@ -2,9 +2,12 @@ package t3h.vn.makecomfortstore.dto;
 
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
+import t3h.vn.makecomfortstore.entities.ProductColorEntity;
+import t3h.vn.makecomfortstore.entities.ProductSizeEntity;
+import t3h.vn.makecomfortstore.entities.ProductVariantEntity;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
+import java.util.List;
 
 @Data
 public class ProductDto {
@@ -18,19 +21,41 @@ public class ProductDto {
     @Size(min = 3, max = 20, message = "Biệt hiệu phải từ 3 - 20 kí tự!")
     private String productAlias;
 
-    private String mainImage;
-    private MultipartFile fileImage;
-
-    @NotBlank(message = "Không được bỏ trống giá sản phẩm!")
-    private Double productPrice;
-
-    private Integer productDiscount;
-
     @Size(max = 1000, message = "Mô tả sản phẩm không được quá 1000 kí tự!")
     private String productDescription;
 
-    private Integer productDelete;
+//    @NotNull(message = "Ảnh chính không được để trống!")
+    private MultipartFile fileImage;
+    private String mainImage;
 
-    @NotBlank(message = "Không được để trống loại sản phẩm")
+//    @NotEmpty(message = "Ảnh phụ sản phẩm không được để trống!")
+    private MultipartFile[] listFileExtraImage;
+    private List<Long> listExtraImage;
+
+    @NotNull(message = "Không được để trống loại sản phẩm")
     private Integer categoryId;
+
+    @NotEmpty(message = "Size không được để trống!")
+    private List<Integer> listSize;
+
+    @NotEmpty(message = "Không được để trống màu sắc!")
+    private List<Integer> listColor;
+
+    @NotNull(message = "Không được bỏ trống giá sản phẩm!")
+    @PositiveOrZero(message = "Giá sản phẩm không thể là giá trị âm!")
+    private Double productPrice;
+
+    @PositiveOrZero(message = "Giảm giá không thể là giá trị âm!")
+    @Max(value = 100, message = "Giảm giá không được lớn hơn 100!")
+    private Integer productDiscount;
+
+    @NotNull(message = "Số lượng không được để trống!")
+    @PositiveOrZero(message = "Số lượng không thể là giá trị âm!")
+    private Integer productQuantity;
+
+    private Integer productEnabled;
+
+    private List<ProductSizeEntity> listProductSize;
+    private List<ProductColorEntity> listProductColor;
+    private List<ProductVariantEntity> listProductVariant;
 }

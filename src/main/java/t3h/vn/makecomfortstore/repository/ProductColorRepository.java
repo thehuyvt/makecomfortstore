@@ -11,4 +11,7 @@ public interface ProductColorRepository extends JpaRepository<ProductColorEntity
     List<ProductColorEntity> findListProductColor();
 
     ProductColorEntity findByColorName(String name);
+
+    ProductColorEntity findByColorId(Integer id);
+
 }

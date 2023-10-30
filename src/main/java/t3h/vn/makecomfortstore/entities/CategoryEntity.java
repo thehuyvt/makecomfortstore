@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class CategoryEntity {
     @Id
-    @Column(name = "categoryId")
+    @Column(name = "category_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoryId;
 
@@ -20,6 +20,10 @@ public class CategoryEntity {
 
     @Column(name = "status")
     private Integer categoryStatus;
+
+//    @Lob
+//    @Column(name = "logo", columnDefinition = "MEDIUMBLOB")
+//    private String categoryLogo;
 
     @Column(name = "logo")
     private String categoryLogo;

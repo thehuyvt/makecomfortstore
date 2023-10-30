@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductEntity {
 
     @Id
-    @Column(name = "productId")
+    @Column(name = "product_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
 
@@ -22,7 +22,7 @@ public class ProductEntity {
     @Column(name = "alias")
     private String productAlias;
 
-    @Column(name = "mainImage")
+    @Column(name = "main_image")
     private String mainImage;
 
     @Column(name = "price")
@@ -34,8 +34,8 @@ public class ProductEntity {
     @Column(name = "description")
     private String productDescription;
 
-    @Column(name = "delete")
-    private Integer productDelete;
+    @Column(name = "enabled")
+    private Integer productEnabled;
 
     @Column(name = "create_time")
     private String createTime;
@@ -44,7 +44,7 @@ public class ProductEntity {
     private String updateTime;
 
     @ManyToOne
-    @JoinColumn(name = "categoryId", referencedColumnName = "categoryId")
+    @JoinColumn(name = "category_id", referencedColumnName = "category_id")
     private CategoryEntity category;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)

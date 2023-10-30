@@ -17,6 +17,8 @@
     <!-- Custom styles for this template -->
     <link th:href="@{/css/sidebars.css}" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/style_admin.css}">
+    <link th:href="@{/css/create-product.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" th:fragment="icon_svg">
@@ -89,7 +91,7 @@
               </button>
               <div class="collapse" id="product-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Danh sách sản phẩm</a></li>
+                  <li><a th:href="@{/management/product/list}" class="link-dark rounded">Danh sách sản phẩm</a></li>
                   <li><a th:href="@{/management/category/list}" class="link-dark rounded">Danh sách loại sản phẩm</a></li>
 <!--                  <li><a href="#" class="link-dark rounded">Sản phẩm hết hàng</a></li>-->
                   <li><a th:href="@{/management/product-size/list}" class="link-dark rounded">Danh sách kích cỡ</a></li>
@@ -293,7 +295,7 @@
             label: 'This week',
             backgroundColor: 'rgba(161, 198, 247, 1)',
             borderColor: 'rgb(47, 128, 237)',
-            data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
+            data: [3000, 4000, 2000, 2200, 8000, 9000, 2000],
           }]
         },
         options: {

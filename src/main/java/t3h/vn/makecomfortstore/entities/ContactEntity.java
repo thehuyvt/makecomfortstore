@@ -19,7 +19,7 @@ public class ContactEntity {
     @Column(name = "email", length = 150)
     private String contactEmail;
 
-    @Column(name = "phoneNumber", length = 20)
+    @Column(name = "phone_number", length = 20)
     private String contactPhone;
 
     @Column(name = "title", length = 200)

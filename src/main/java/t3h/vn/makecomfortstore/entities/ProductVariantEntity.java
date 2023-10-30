@@ -1,7 +1,5 @@
 package t3h.vn.makecomfortstore.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,11 +10,12 @@ import java.util.List;
 @Data
 public class ProductVariantEntity {
     @Id
-    @Column(name = "variantId")
+    @Column(name = "variant_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long variantId;
 
-    @Column(name = "instock")
-    private Integer instock;
+    @Column(name = "in_stock")
+    private Integer inStock;
 
     @OneToMany(mappedBy = "productVariantEntity", cascade = CascadeType.ALL)
     private List<CartDetailEntity> cartDetailEntityList;
@@ -25,7 +24,7 @@ public class ProductVariantEntity {
     private List<OrderDetailEntity> orderDetailEntityList;
 
     @ManyToOne
-    @JoinColumn(name = "productId", referencedColumnName = "productId")
+    @JoinColumn(name = "product_id", referencedColumnName = "product_id")
     private ProductEntity product;
 
     @ManyToOne
@@ -33,6 +32,6 @@ public class ProductVariantEntity {
     private ProductSizeEntity productSizeEntity;
 
     @ManyToOne
-    @JoinColumn(name = "colorId", referencedColumnName = "colorId")
+    @JoinColumn(name = "color_id", referencedColumnName = "color_id")
     private ProductColorEntity productColorEntity;
 }

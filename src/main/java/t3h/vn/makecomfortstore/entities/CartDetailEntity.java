@@ -17,10 +17,10 @@ public class CartDetailEntity {
     private int cartDetailQuantity;
 
     @ManyToOne
-    @JoinColumn(name = "cartId", nullable = false, referencedColumnName = "cartId")
+    @JoinColumn(name = "cart_id", nullable = false, referencedColumnName = "cart_id")
     private CartEntity cart;
 
     @ManyToOne
-    @JoinColumn(name = "variantId", referencedColumnName = "variantId", nullable = false)
+    @JoinColumn(name = "variant_id", referencedColumnName = "variant_id", nullable = false)
     private ProductVariantEntity productVariantEntity;
 }

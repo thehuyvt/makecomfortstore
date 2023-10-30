@@ -11,11 +11,11 @@ import java.util.List;
 @Data
 public class ProductColorEntity {
     @Id
-    @Column(name = "colorId")
+    @Column(name = "color_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer colorId;
 
-    @Column(name = "colorName")
+    @Column(name = "color_name")
     private String colorName;
 
     @Column(name = "color_status")

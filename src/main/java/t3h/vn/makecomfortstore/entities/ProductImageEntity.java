@@ -18,6 +18,6 @@ public class ProductImageEntity {
     private String subImage;
 
     @ManyToOne
-    @JoinColumn(name = "productId", referencedColumnName = "productId")
+    @JoinColumn(name = "product_id", referencedColumnName = "product_id")
     private ProductEntity product;
 }

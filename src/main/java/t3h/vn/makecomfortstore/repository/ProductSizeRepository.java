@@ -9,6 +9,9 @@ import java.util.List;
 public interface ProductSizeRepository extends JpaRepository<ProductSizeEntity, Integer> {
     ProductSizeEntity findBySizeName(String name);
 
+    ProductSizeEntity findBySizeId(Integer id);
+
     @Query("SELECT ps FROM ProductSizeEntity ps WHERE ps.sizeStatus = 1")
     List<ProductSizeEntity> findListSize();
+
 }

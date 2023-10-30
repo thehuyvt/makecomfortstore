@@ -44,6 +44,10 @@ public class CategoryService {
         }
     }
 
+//    public ResponseObject save(CategoryDto categoryDto){
+//
+//    }
+
     //lấy dsach
     public ResponseObject getCategoryList(){
         List<CategoryEntity> categoryEntityList = categoryRepository.findListCategory();
@@ -63,9 +67,9 @@ public class CategoryService {
     // cập nhật phân loại
     public ResponseObject updateCategory(CategoryDto categoryDto){
         CategoryEntity categoryEntity = categoryRepository.findById(categoryDto.getCategoryId()).orElse(null);
-        CategoryEntity categoryCheck = categoryRepository.findByCategoryName(categoryDto.getCategoryName());
-        if (categoryEntity.getCategoryName().equals(categoryDto.getCategoryName()) || categoryCheck == null ||
-                (categoryCheck != null && categoryCheck.getCategoryStatus() == 0)){
+        CategoryEntity categoryCheckName = categoryRepository.findByCategoryName(categoryDto.getCategoryName());
+        if (categoryEntity.getCategoryName().equals(categoryDto.getCategoryName()) || categoryCheckName == null ||
+                (categoryCheckName != null && categoryCheckName.getCategoryStatus() == 0)){
 
             categoryEntity.setCategoryName(categoryDto.getCategoryName());
             if (categoryDto.getFileName() != null && !categoryDto.getFileName().getOriginalFilename().equals("")){
